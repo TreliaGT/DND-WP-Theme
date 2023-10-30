@@ -1,0 +1,15 @@
+<?php
+
+//calling other functions
+include get_template_directory() . '/functions/option-page.php';
+include get_template_directory() . '/functions/custom-posts-type.php';
+include get_template_directory() . '/functions/player-custom-fields.php';
+include get_template_directory() . '/functions/monster-custom-fields.php';
+include get_template_directory() . '/functions/npc-custom-fields.php';
+
+function disable_custom_fields() {
+    echo '<style>.postbox-container#postcustom { display: none; }</style>';
+    echo '<script>jQuery(document).ready(function($){ $("#postcustom").remove(); });</script>';
+}
+
+add_action('admin_head', 'disable_custom_fields');
