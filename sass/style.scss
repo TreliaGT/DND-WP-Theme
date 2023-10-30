@@ -6,7 +6,10 @@ Version: 1.0
 Requires at least: 6.3
 Tags: Character-Sheets, Campaign-Tracking, Monster-Codex, Quest-Log
 */
+
+$primary : #A0CECB;
+$secondary : #37BC9B;
+
 .btn {
-  color: #A0CECB;
+    color:$primary;
 }
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22http%3A%2F%2Fcustom-test-site.test%2F%22%2C%22sources%22%3A%5B%22D%3A%2Fwww%2FCustom-Test-Site%2Fwp-content%2Fthemes%2Fcustom-theme%2Fsass%2Fstyle.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAYA%3BAAAA%3BAAAA%22%7D */

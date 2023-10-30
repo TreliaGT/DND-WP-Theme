@@ -13,3 +13,11 @@ function disable_custom_fields() {
 }
 
 add_action('admin_head', 'disable_custom_fields');
+
+
+function disable_theme_editor() {
+    define('DISALLOW_FILE_EDIT', true);
+    define('DISALLOW_FILE_MODS', true);
+}
+
+add_action('init', 'disable_theme_editor');

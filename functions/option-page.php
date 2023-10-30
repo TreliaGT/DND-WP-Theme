@@ -33,9 +33,11 @@ function campaign_options_init() {
 
     add_settings_field('campaign_title', 'Campaign Title', 'campaign_title_callback', 'campaign-options', 'campaign_options_section');
     add_settings_field('campaign_overview', 'Campaign Overview', 'campaign_overview_callback', 'campaign-options', 'campaign_options_section');
+    add_settings_field('campaign_cover_image', 'Campaign Cover Image (URL)', 'campaign_cover_image_callback', 'campaign-options', 'campaign_options_section');
 
     register_setting('campaign_options_group', 'campaign_title');
     register_setting('campaign_options_group', 'campaign_overview');
+    register_setting('campaign_options_group', 'campaign_cover_image');
 }
 
 add_action('admin_init', 'campaign_options_init');
@@ -56,6 +58,11 @@ function campaign_overview_callback() {
     echo '<textarea name="campaign_overview">' . esc_textarea($campaign_overview) . '</textarea>';
 }
 
+function campaign_cover_image_callback() {
+    $campaign_cover_image = get_option('campaign_cover_image');
+    echo '<input type="url" name="campaign_cover_image" value="' . esc_attr($campaign_cover_image) . '" />';
+}
+
 
 function save_campaign_options() {
     if (isset($_POST['campaign_title'])) {
@@ -64,6 +71,10 @@ function save_campaign_options() {
 
     if (isset($_POST['campaign_overview'])) {
         update_option('campaign_overview', sanitize_text_field($_POST['campaign_overview']));
+    }
+
+    if (isset($_POST['campaign_cover_image'])) {
+        update_option('campaign_cover_image', sanitize_text_field($_POST['campaign_cover_image']));
     }
 }
 
