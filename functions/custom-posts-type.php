@@ -245,23 +245,55 @@ function register_items_taxonomy() {
 }
 add_action('init', 'register_items_taxonomy');
 
+function register_locations_taxonomy() {
+    $labels = array(
+        'name' => 'locations',
+        'singular_name' => 'location',
+        'menu_name' => 'locations',
+    );
 
-// adding additional fields to item: 
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+    );
+
+    register_taxonomy('locations', array('monsters', 'quests', 'players', 'npcs'), $args);
+}
+add_action('init', 'register_locations_taxonomy');
+
+// adding additional fields to item & Location: 
 function add_taxonomy_custom_fields() {
     // Add a custom field for the "Thumbnail"
     add_action('item_add_form_fields', 'add_thumbnail_field', 10, 2);
     add_action('created_item', 'save_thumbnail_field', 10, 2);
 
+    add_action('locations_add_form_fields', 'add_thumbnail_field', 10, 2);
+    add_action('created_locations', 'save_thumbnail_field', 10, 2);
+
     // Add a custom field for "Additional Information"
     add_action('item_add_form_fields', 'add_additional_info_field', 10, 2);
     add_action('created_item', 'save_additional_info_field', 10, 2);
+
+    add_action('locations_add_form_fields', 'add_additional_info_field', 10, 2);
+    add_action('created_locations', 'save_additional_info_field', 10, 2);
 
     // Edit term page
     add_action('item_edit_form_fields', 'edit_thumbnail_field', 10, 2);
     add_action('edited_item', 'update_thumbnail_field', 10, 2);
 
+    add_action('locations_edit_form_fields', 'edit_thumbnail_field', 10, 2);
+    add_action('edited_locations', 'update_thumbnail_field', 10, 2);
+
+
     add_action('item_edit_form_fields', 'edit_additional_info_field', 10, 2);
     add_action('edited_item', 'update_additional_info_field', 10, 2);
+
+    add_action('locations_edit_form_fields', 'edit_additional_info_field', 10, 2);
+    add_action('edited_locations', 'update_additional_info_field', 10, 2);
 }
 
 add_action('admin_init', 'add_taxonomy_custom_fields');
@@ -343,3 +375,9 @@ function update_additional_info_field($term_id, $tt_id) {
         update_term_meta($term_id, 'additional_info', sanitize_text_field($_POST['term-additional-info']));
     }
 }
+
+
+
+
+
+

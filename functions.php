@@ -21,3 +21,13 @@ function disable_theme_editor() {
 }
 
 add_action('init', 'disable_theme_editor');
+
+// adding custom fields to certain posts/pages 
+// function add_custom_fields_to_page() {
+//     $page_id = 123; // Replace with the actual page ID.
+//     $field_name = 'custom_field_name';
+//     $field_value = 'Your custom field value';
+
+//     add_post_meta($page_id, $field_name, $field_value, true);
+// }
+// add_action('init', 'add_custom_fields_to_page');
