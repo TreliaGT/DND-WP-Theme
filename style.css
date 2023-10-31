@@ -9,4 +9,130 @@ Tags: Character-Sheets, Campaign-Tracking, Monster-Codex, Quest-Log
 .btn {
   color: #A0CECB;
 }
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22http%3A%2F%2Fcustom-test-site.test%2F%22%2C%22sources%22%3A%5B%22D%3A%2Fwww%2FCustom-Test-Site%2Fwp-content%2Fthemes%2Fcustom-theme%2Fsass%2Fstyle.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAYA%3BAAAA%3BAAAA%22%7D */
+.bg-primary-style {
+  background-color: #A0CECB;
+}
+.background-op {
+  background-color: rgba(160, 206, 203, 0.8) !important;
+}
+.menu-item {
+  padding: 0 10px;
+}
+h2 {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  background: linear-gradient(to right, #A0CECB 0%, #37BC9B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: inherit !important;
+}
+.banner {
+  clip-path: polygon(23% 100%, 100% 75%, 100% 0, 0 0, 0 83%);
+}
+.banner > div > div {
+  width: 40%;
+}
+@media (max-width: 980px) {
+  .banner > div > div {
+    width: 80%;
+  }
+}
+.players div.w-full {
+  position: relative;
+}
+.players div.w-full .health {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+.players div.w-full .level {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.players div.w-full .info.p-4 {
+  background-color: #ffffffe3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.players div.w-full .info.p-4 div {
+  display: flex;
+  flex-direction: row;
+}
+.players div.w-full .info.p-4 div p {
+  width: 50%;
+}
+.players div.w-full .info.p-4 div p:last-child {
+  text-align: end;
+}
+@media (max-width: 980px) {
+  .players div.w-full {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.internal-player .w-full {
+  position: relative;
+}
+.internal-player .w-full .icons-right {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.internal-player .w-full .icons-right .health {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+.internal-player .w-full .icons-right .level {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.main-map img {
+  object-fit: contain;
+  max-height: 800px;
+  margin: auto;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22http%3A%2F%2Fcustom-test-site.test%2F%22%2C%22sources%22%3A%5B%22D%3A%2Fwww%2FCustom-Test-Site%2Fwp-content%2Fthemes%2Fcustom-theme%2Fsass%2Fstyle.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAYA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAASA%3BAAAA%3BAAAA%3BAAEI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3BAAAA%3BAAEI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAkBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAgBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMK%3BAAAA%3BAAAA%3BAAAA%3BAAIG%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAOZ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAEI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAeA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAiBR%3BAAAA%3BAAAA%3BAAAA%3BAAAA%22%7D */

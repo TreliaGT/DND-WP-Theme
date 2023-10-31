@@ -7,13 +7,17 @@ include get_template_directory() . '/functions/player-custom-fields.php';
 include get_template_directory() . '/functions/monster-custom-fields.php';
 include get_template_directory() . '/functions/npc-custom-fields.php';
 
+add_theme_support('post-thumbnails');
+
+
+// disable the custom fields
 function disable_custom_fields() {
     echo '<style>.postbox-container#postcustom { display: none; }</style>';
     echo '<script>jQuery(document).ready(function($){ $("#postcustom").remove(); });</script>';
 }
-
 add_action('admin_head', 'disable_custom_fields');
 
+// Register Menu
 function set_up(){
 	register_nav_menus(
         array(
@@ -24,6 +28,7 @@ function set_up(){
 }
 add_action( 'after_setup_theme', 'set_up' );
 
+// Disable Theme Editor
 function disable_theme_editor() {
     define('DISALLOW_FILE_EDIT', true);
    // define('DISALLOW_FILE_MODS', true);

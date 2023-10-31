@@ -35,6 +35,7 @@ function register_players_custom_post_type() {
 add_action('init', 'register_players_custom_post_type');
 
 
+
 // Register Custom Post Type for Quests
 function register_quest_custom_post_type() {
     $labels = array(
